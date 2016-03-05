@@ -1,0 +1,13 @@
+body{
+	margin: 0px;
+	padding: 0px;
+}
+
+.footer{
+          /*width: auto;*/
+          height: 100px;
+          font-family: verdana;
+          text-align: center;
+          color: #fff;
+          background: #000;
+        }
