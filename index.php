@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,8 +10,9 @@
           <frame src="title.html">
         <frameset cols="20%, *">
            <frame src="menu.html">
-           <frame name="content">
+           <frame src = "home.php "name="content">
         </frameset>
      </frameset>
 
 </html>
+

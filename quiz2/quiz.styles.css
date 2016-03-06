@@ -1,0 +1,14 @@
+div#test{
+      width: 60%;
+      margin-left: 10%;
+      height: auto;
+      border: #000 1px solid; padding: 10px 10px 10px 20px;
+      border-radius:10px; 
+    }
+#test_status{
+
+}
+
+.option{
+	cursor: pointer;
+}

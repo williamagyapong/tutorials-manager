@@ -5,9 +5,11 @@ body{
 
 .footer{
           /*width: auto;*/
+          padding-top: 20px;
           height: 100px;
           font-family: verdana;
           text-align: center;
           color: #fff;
           background: #000;
         }
+
