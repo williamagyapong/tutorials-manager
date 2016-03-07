@@ -1,14 +1,18 @@
 div#test{
       width: 60%;
-      margin-left: 10%;
+      margin-left: 15%;
       height: auto;
       border: #000 1px solid; padding: 10px 10px 10px 20px;
       border-radius:10px; 
     }
 #test_status{
-
+    margin-left: 8%;
 }
 
 .option{
 	cursor: pointer;
+}
+
+table th, td{
+	width: 100px;
 }

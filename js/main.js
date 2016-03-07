@@ -25,3 +25,24 @@ function timer()
 
 	}, 1)
 }
+
+function dispAnswer()
+{
+   $('#answers').css({"display":"block"});
+}
+
+$(document).ready(function(){
+   $("button").click(function(){
+      
+      $('#fade').fadeIn(4000);
+   })
+
+   $("button").dblclick(function(){
+      
+      $('#fade').fadeOut(4000);
+   })
+     
+    $('#span1').animate({marginTop: 300},"8000");
+
+    })
+

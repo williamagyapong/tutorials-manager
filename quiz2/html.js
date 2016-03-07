@@ -82,7 +82,7 @@ var  questions = [
          ],
 
          [
-           ". What is the correct HTML for making a hyperlink? ", "&lt;a href=\"http:// mcqsets.com\"&gt;ICT Trends Quiz&lt;/a &gt; ", 
+           " What is the correct HTML for making a hyperlink? ", "&lt;a href=\"http:// mcqsets.com\"&gt;ICT Trends Quiz&lt;/a &gt; ", 
            " &lt;a name=\"http:// mcqsets.com\"&gt;ICT Trends Quiz&lt;/a &gt;", "&lt;http://mcqsets.com &gt;&lt;/a &gt;", " url=”http://mcqsets.com”&gt;ICT Trends Quiz ", "A"
          ],
 
@@ -117,7 +117,7 @@ var  questions = [
          ],
 
          [
-           "Which tag creates a check box for a form in HTML? ", "&lt; &gt; ", "&lt;input type =\"checkbox\" &gt; ", 
+           "Which tag creates a check box for a form in HTML? ", "&lt;checkbox &gt; ", "&lt;input type =\"checkbox\" &gt; ", 
            "&lt;input =\"checkbox\" &gt;", "&lt;input checkbox &gt; ", "B"
          ],
 

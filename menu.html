@@ -3,6 +3,9 @@
 <head>
 	<title></title>
 	<style type="text/css">
+  body{
+    margin: 0px; padding: 0px;
+  }
      a{
      	text-decoration: none;
      	color: blue;
@@ -13,18 +16,43 @@
      	font-family: verdana;
      	font-size: 18px;
      }
+
+     h2{
+      cursor: pointer;
+      border-radius: 5px;
+     }
+     h2:hover{
+      background: blue;
+      color: white;
+      font-weight: bold;
+      font-family: verdana;
+     }
+     .menu{
+       background: #EEF3E2; padding: 10px 0px 50px 0px;
+       height: 100%;
+
+     }
 	</style>
 </head>
 <body>
    <center>
-   	  <h3>Click to view content</h3>
+   <div class="menu">
+      <h2 title="practical assignments">Assignments</h2>
       <a href="instruction.html" target="content" >Instructions</a><br>
       <a href="assignment1.html" target="content" title="test your knowledge on html tables">Assignment 1</a> <br>
       <a href="assignment2.html" target="content" title="test your knowledge on html forms">Assignment 2</a><br>
       <br><br>
-      <h2>Take quiz</h2>
+      <h2 title="online quiz">Take quiz</h2>
       <a href="quiz2/html.php" target="content" title="Test your knowledge on html">HTML</a><br>
-      <a href="quiz2/css.php" target="content" title="Test your knowledge on html">CSS</a>
+      <a href="quiz2/css.php" target="content" title="Test your knowledge on css">CSS</a><br><br>
+      <h2 title="recommended study materials">Study Materials</h2>
+      <a href="files/html_tutorialpoint.pdf" target="_blank" title="click to view or download">HTML Tutorial</a><br>
+      <a href="files/html1.pdf" target="_blank" title="click to view or download">Basic HTML</a><br>
+      <a href="files/html2.pdf" target="_blank" title="click to view or download">HTML, A beginer's guide</a><br>
+      <a href="http://www.w3schools.com" target="_blank" title="visit w3schools">w3schools online tutorials</a><br>
+   </div>
+   	 
+     
    </center>
       
 </body>
