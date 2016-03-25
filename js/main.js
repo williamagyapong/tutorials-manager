@@ -26,12 +26,78 @@ function timer()
 	}, 1)
 }
 
+
+
+  
+
+function checkAnswer()
+       {
+         choices = document.getElementsByName("choices");
+
+          for(var i = 0; i<choices.length; i++)
+          {
+           
+             if(choices[i].checked)
+             {
+               choice  = choices[i].value;
+
+            }
+             
+          }
+          
+          if(choice == questions[pos][5])
+                { 
+                    correct++;
+                 
+                }
+    
+         pos++;
+         renderQuestion();
+         $('#hide').hide();
+         
+       }
+
+
 function dispAnswer()
 {
    $('#answers').css({"display":"block"});
+   $('#disp').hide();
+   $('#hide').show();
 }
 
-$(document).ready(function(){
+function hideAnswer()
+{
+   $('#answers').css({"display":"none"});
+   $('#hide').hide();
+   $('#disp').show();
+}
+
+
+function back()
+       {
+         
+         if(pos<=0)
+         { 
+            pos = numQuestions-1;
+            //alert("Please use the next button");
+         }
+         else{
+              pos--;
+         }
+           
+
+           renderQuestion();
+       }
+
+function startOver()
+       {
+         pos = 0;
+         renderQuestion();
+         correct = 0;
+         _('answers').style.display = "none";
+       }
+
+/*$(document).ready(function(){
    $("button").click(function(){
       
       $('#fade').fadeIn(4000);
@@ -44,5 +110,12 @@ $(document).ready(function(){
      
     $('#span1').animate({marginTop: 300},"8000");
 
-    })
+    })*/
 
+    choices = document.getElementsByName("choices");
+
+          for(var i = 0; i<choices.length; i++)
+          {
+            choices[i].disabled = true;
+             
+          }

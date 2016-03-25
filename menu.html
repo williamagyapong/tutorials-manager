@@ -6,54 +6,172 @@
   body{
     margin: 0px; padding: 0px;
   }
+  .menu{
+       background: #EEF3E2; padding-top: 10px;padding-bottom:0px;
+       height: 490px; overflow: auto;  margin-bottom: 0px; 
+
+     }
      a{
      	text-decoration: none;
      	color: blue;
      }
      a:hover{
-     	font-style: italic;
+     	font-style: normal;
      	color: red;
      	font-family: verdana;
-     	font-size: 18px;
+     	font-size: 16px;
      }
 
      h2{
       cursor: pointer;
       border-radius: 5px;
-     }
-     h2:hover{
       background: blue;
       color: white;
       font-weight: bold;
       font-family: verdana;
      }
-     .menu{
-       background: #EEF3E2; padding: 10px 0px 50px 0px;
-       height: 100%;
+     h2:hover{
+      background: red;
+      color: white;
+      font-weight: bold;
+      font-family: verdana;
+     }
+     
 
+     #assignhead{
+        font-weight: bold;font-size: 20px;
+        cursor: pointer;
+     }
+     .content{
+       border: 1px solid red;
+         
+     }
+     #assignments{
+       cursor: pointer;/*font-weight: bold;*/
+     }
+     .studymat{
+       height: 60px; overflow: auto; border: 1px solid black;background: #fff; padding: 5px;
      }
 	</style>
 </head>
 <body>
    <center>
    <div class="menu">
-      <h2 title="practical assignments">Assignments</h2>
-      <a href="instruction.html" target="content" >Instructions</a><br>
-      <a href="assignment1.html" target="content" title="test your knowledge on html tables">Assignment 1</a> <br>
-      <a href="assignment2.html" target="content" title="test your knowledge on html forms">Assignment 2</a><br>
+      <h2 title="practical assignments" class="assignments">Assignments</h2>
+     <div class="assign-body">
+        <span class="current-assign" title="click to view content" id="assignhead" style="color: red">Current Assignment</span><br>
+      <div class="current-content" id="content">
+        <span class="current1" id="assignments">Assignment 2</span><br>
+          <div class="current-problem"> 
+             <a href="week5.probset1.html" target="content" title="test your understanding on frames">Problem set 1</a> <br>
+             <a href="week5.probset2.html" target="content" title="test your knowledge on html forms">Problem set 2</a>
+          </div>
+      </div>
+
+      <span class="prev-assign" title="click to view content" id="assignhead">Previous Assignments</span>
+      <div class="prev-content" id="content">
+        <span class="assignment1" id="assignments">Assignment 1</span><br>
+          <div class="assign1"> 
+             <a href="instruction.html" target="content" >Instructions</a><br>
+             <a href="assignment1.html" target="content" title="test your knowledge on html tables">Problem set 1</a> <br>
+             <a href="assignment2.html" target="content" title="test your knowledge on html forms">Problem set 2</a>
+          </div>
+
+        <!-- <span class="assignment2" id="assignments">Assignment 2</span>
+          <div class="assign2"> 
+             <a href="instruction.html" target="content" >Instructions</a><br>
+             <a href="assignment1.html" target="content" title="test your knowledge on html tables">Problem set 1</a> <br>
+             <a href="assignment2.html" target="content" title="test your knowledge on html forms">Problem set 2</a>
+          </div> -->
+      
+      </div>
+     </div>
+     
+      <br>
       <br><br>
-      <h2 title="online quiz">Take quiz</h2>
-      <a href="quiz2/html.php" target="content" title="Test your knowledge on html">HTML</a><br>
-      <a href="quiz2/css.php" target="content" title="Test your knowledge on css">CSS</a><br><br>
-      <h2 title="recommended study materials">Study Materials</h2>
-      <a href="files/html_tutorialpoint.pdf" target="_blank" title="click to view or download">HTML Tutorial</a><br>
-      <a href="files/html1.pdf" target="_blank" title="click to view or download">Basic HTML</a><br>
-      <a href="files/html2.pdf" target="_blank" title="click to view or download">HTML, A beginer's guide</a><br>
-      <a href="http://www.w3schools.com" target="_blank" title="visit w3schools">w3schools online tutorials</a><br>
+
+      <!-- <a href="prev-assignment.html" target="content" title="click to view odd assignments">Previous Assignments</a> -->
+
+      <h2 title="online quiz" class="quiz">Take quiz</h2>
+      <div class="quiz-body">
+         <a href="quiz2/html.php" target="content" title="Test your knowledge on html">HTML</a><br>
+      <a href="quiz2/css.php" target="content" title="Test your knowledge on css">CSS</a>
+      </div>
+     <br><br>
+
+      <h2 title="recommended study materials" class="resources">Study Materials</h2>
+      <div class="studymat">
+      <ul>
+         <li><a href="files/html_tutorialpoint.pdf" target="_blank" title="click to view or download">HTML Tutorial</a></li>
+      <li><a href="files/html1.pdf" target="_blank" title="click to view or download">Basic HTML</a></li>
+      <li><a href="files/html2.pdf" target="_blank" title="click to view or download">HTML, A beginer's guide</a></li>
+      <li><a href="http://www.w3schools.com/html/default.asp" target="_blank" title="visit w3schools">w3schools html tutorials</a></li>
+      <li><a href="http://www.w3schools.com/css/default.asp" target="_blank" title="visit w3schools">w3schools css tutorials</a></li>
+      </ul>
+         
+      </div>
+      
    </div>
    	 
      
    </center>
       
+<!-- include js files here -->
+  <script type="text/javascript" src="js/jquery-1.12.0.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+
+  <script type="text/javascript">
+        
+        $(document).ready(function(){
+          $('.assign-body').hide();
+          $('.quiz-body').hide();
+          $('.studymat').hide();
+
+          $('.assignments').click(function(){
+             $('.assign-body').toggle();
+          })
+ 
+           $('.quiz').click(function(){
+             $('.quiz-body').toggle();
+          })
+ 
+            $('.resources').click(function(){
+             $('.studymat').toggle();
+          })
+ 
+
+
+          $('.current-content').hide();
+           $('.current-problem').hide();
+
+          $('.prev-content').hide();
+          $('.assign1').hide();
+          $('.assign2').hide();
+
+           $('.current-assign').click(function(){
+              $('.current-content').toggle();
+
+              $('.current1').click(function(){
+                  $('.current-problem').toggle();
+              })
+
+              $('.assignment2').click(function(){
+                  $('.assign2').toggle();
+              })
+           })
+
+           $('.prev-assign').click(function(){
+              $('.prev-content').toggle();
+
+              $('.assignment1').click(function(){
+                  $('.assign1').toggle();
+              })
+
+              $('.assignment2').click(function(){
+                  $('.assign2').toggle();
+              })
+           })
+        })
+      </script>
 </body>
 </html>
